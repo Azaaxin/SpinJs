@@ -86,10 +86,18 @@ function $pin(selector)
 
         },
         random:(rand_floor)=>{
+            if(selector == null){
+                if(rand_floor == undefined)
+                    return Math.floor(Math.random() * 10); 
+                else
+                    return Math.floor(Math.random() * rand_floor); 
+                
+            }else{
             if(rand_floor == undefined)
             self.Element.innerHTML += Math.floor(Math.random() * 10); 
             else
             self.Element.innerHTML += Math.floor(Math.random() * rand_floor); 
+            }
         },
         phoneMenu:(float, target)=>{
             var element = document.getElementById(target);
@@ -162,10 +170,38 @@ function $pin(selector)
                 }
                 });
             }
+        },
+        divInfo:(type)=>{
+            var element = self.Element;
+            var positionInfo = element.getBoundingClientRect();
+            var height = positionInfo.height;
+            var width = positionInfo.width;
+            var right = positionInfo.right;
+            var top = positionInfo.top;
+            var left = positionInfo.left;
+            var bottom = positionInfo.bottom;
+            if(type == "left"){
+                return left;
+            }
+            if(type == "right"){
+                return right;
+            }
+            if(type == "top"){
+                return top;
+            }
+            if(type == "bottom"){
+                return bottom;
+            }
+            if(type == "width"){
+                return width;
+            }
+            if(type == "height"){
+                return height;
+            }
         }
         
     }
-    return self
+    return self;
 }
 function $pincore(){   // Working through variables
     var me = {};
