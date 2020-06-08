@@ -32,7 +32,7 @@ With **Spin** can you work with the selector, with **Spincore** you don't need t
 Yes of course you can. But make sure you let people know that I'm the author by not removing comments in the library. 
 
 ## In depth
-| Line | Syntax|
+| Function | Syntax|
 |--|--|
 | phoneMenu() | The target is used for toggling the menu and the `selector` is the object you want to act like a menu. `$pin(id).phoneMenu("right / left / top / bottom", "id")` |
 | getAjax() | Used to make a AJAX call to specified document. Attribute can be ignored. Specify `search` to find a object by name. `$pin(selector).getAjax(url, attribute / null, search)` |
