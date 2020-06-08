@@ -15,7 +15,7 @@ Tool for my own use to speed up the process of making websites.
 ##Spincore CommandList
 | Syntax | Description |
 |--|--|
-| $pincore().random(value / empty) | Gives you a random number, default is 10. |
+| `$pincore().random(value / empty)` | Gives you a random number, default is 10. |
 
 ## What can it do?
 It can't do much at the moment, just printing out AJAX in specific div's. More functions will be added!
