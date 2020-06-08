@@ -1,7 +1,7 @@
 # SpincoreJs
 Tool for my own use to speed up the process of making websites.
 
-## CommandList
+##Spin CommandList
 
 | Syntax | Description |
 |--|--|
@@ -9,9 +9,19 @@ Tool for my own use to speed up the process of making websites.
 | $pin(selector).hide(); | Hides selected object |
 | $pin(selector).getText(url, attribute); | Grabs the text from url, super basic ajax |
 | $pin(selector).getAjax(url, attribute, search); | Ajax call that can search through JSON for the right values |
+| $pin(selector).phoneMenu(float, target); | Handles the positioning of hamburger menu's |
+| $pin(selector).random(value | empty); | Gives you a random number, default is 10. |
+
+##Spincore CommandList
+| Syntax | Description |
+|--|--|
+| $pincore().random(value | empty) | Gives you a random number, default is 10. |
 
 ## What can it do?
 It can't do much at the moment, just printing out AJAX in specific div's. More functions will be added!
+
+## What is the difference between Spincore and Spin?
+With Spin do you work with the selector, with Spincore you don't need that.
 
 ## Can I use this?
 Yes of course you can do. But make sure you let people know that I'm the author by not removing comments in the library. 
