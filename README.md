@@ -10,7 +10,7 @@ Tool for my own use to speed up the process of making websites.
 | `$pin(selector).divInfo(value);` | Gets position data and size data from selected object. |
 | `$pin(selector).attr(name, value);` | Changes or list attributes. Just like JQuery. |
 | `$pin(selector).hide();` | Hides selected object |
-| `$pin(selector).getText(url, attribute);` | Grabs content from url, super basic ajax |
+| `$pin(selector).getText(url, attribute);` | Grabs content from url, super basic AJAX |
 | `$pin(selector).getAjax(url, attribute, search);` | AJAX call that can search through JSON for the right values |
 | `$pin(selector).phoneMenu(float, target);` | Handles menu's on mobile devices. Mostly position. |
 | `$pin(selector).random(value / empty);` | Gives you a random number, default is 10. |
