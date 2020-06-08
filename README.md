@@ -29,7 +29,7 @@ It can't do much right now, but it will be a toolkit once it's done. Everything 
 With **Spin** can you work with the selector, with **Spincore** you don't need that. But sadly does **Spincore** have less functions.
 
 ## Can I use this?
-Yes of course you can do. But make sure you let people know that I'm the author by not removing comments in the library. 
+Yes of course you can. But make sure you let people know that I'm the author by not removing comments in the library. 
 
 ## In depth
 | Line | Syntax|
