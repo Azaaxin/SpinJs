@@ -93,7 +93,6 @@ function $pin(selector)
         },
         phoneMenu:(float, target)=>{
             var element = document.getElementById(target);
-            var selc = document.getElementById(selector);
             var positionInfo = element.getBoundingClientRect();
             var height = positionInfo.height;
             var width = positionInfo.width;
@@ -101,38 +100,69 @@ function $pin(selector)
             element.style.transition = ".3s";
             if(float == "left"){
                 element.style.right = "100%";
-                selc.addEventListener("click", function(){
+                window.addEventListener("click", function(e){
+                if (document.getElementById(selector).contains(e.target) || document.getElementById(target).contains(e.target)){
                     element.style.position = "absolute";
+                    element.style.width = width + "px";
                     element.style.right = "calc(100%" + " - " + width + "px)";
                     element.style.cursor = "pointer";
                     element.style.transition = ".3s";
+                } else{
+                    element.style.position = "absolute";
+                    element.style.left = "0px";
+                    element.style.width = "0px";
+                    element.style.cursor = "pointer";
+                    element.style.transition = ".3s";
+                }
                 });
             }else if(float == "right"){
                 element.style.left = "100%";
-                selc.addEventListener("click", function(){
+                window.addEventListener("click", function(e){
+                if (document.getElementById(selector).contains(e.target) || document.getElementById(target).contains(e.target)){
                     element.style.position = "absolute";
                     element.style.left = "calc(100%" + " - " + width + "px)";
                     element.style.cursor = "pointer";
+                    element.style.width = width + "px";
+                } else{
+                    element.style.position = "absolute";
+                    element.style.left = "100%";
+                    element.style.width = "0px";
+                    element.style.cursor = "pointer";
+                }
                 });
             }
             if(float == "top"){
                 element.style.top = "-" + height + "px";
-                selc.addEventListener("click", function(){
-                    element.style.position = "absolute";
-                    element.style.top = "0px";
-                    element.style.cursor = "pointer";
-                    element.style.transition = ".3s";
+                window.addEventListener("click", function(e){
+                    if (document.getElementById(selector).contains(e.target) || document.getElementById(target).contains(e.target)){
+                        element.style.position = "absolute";
+                        element.style.top = "0px";
+                        element.style.cursor = "pointer";
+                        element.style.transition = ".3s";
+                      } else{
+                        element.style.position = "absolute";
+                        element.style.top = "-" + height + "px";
+                        element.style.cursor = "pointer";
+                        element.style.transition = ".3s";
+                      }
                 });
             }else if(float == "bottom"){
                 element.style.height = "0px";
                 element.style.bottom = "0px";
-                selc.addEventListener("click", function(){
+                
+                window.addEventListener("click", function(e){
+                    if (document.getElementById(selector).contains(e.target) || document.getElementById(target).contains(e.target)){
                     element.style.position = "absolute";
                     element.style.height = height + "px";
                     element.style.cursor = "pointer";
+                } else{
+                    element.style.position = "absolute";
+                    element.style.height = "0" + "px";
+                    element.style.cursor = "pointer";
+                }
                 });
             }
-        },
+        }
         
     }
     return self
@@ -145,6 +175,30 @@ function $pincore(){   // Working through variables
             else
                 me = Math.floor(Math.random() * floor); 
             return me;
+        }
+        me.setCookie = function(cookieName, cookieValue, cookieExpires){
+            var date = new Date();
+            date.setTime(date.getTime() + (cookieExpires*24*60*60*1000));
+            var expires = "expires="+ date.toUTCString();
+            document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+        }
+        me.getCookie = function(cookieName){
+                var name = cookieName + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i < ca.length; i++) {
+                  var c = ca[i];
+                  while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                  }
+                  if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                  }
+                }
+                return "";
+        }
+        me.delCookie = function(cookieName){
+            document.cookie = cookieName + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         }
         return me;
 }
