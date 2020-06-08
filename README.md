@@ -1,4 +1,5 @@
 # SpincoreJs
+![Spincore icon](https://i.ibb.co/nPhJBsG/spincore.png)
 Tool for my own use to speed up the process of making websites.
 
 ##Spin CommandList
@@ -16,7 +17,9 @@ Tool for my own use to speed up the process of making websites.
 | Syntax | Description |
 |--|--|
 | `$pincore().random(value / empty)` | Gives you a random number, default is 10. |
-
+| `$pincore().setCookie(cookieName, cookieValue, expires)` | Creates a cookie from specified input. `expires` only count in days.|
+| `$pincore().getCookie(cookieName)` | Gets the cookie value. Has to be selected by it's name. |
+| `$pincore().delCookie(cookieName)` | Removes selected cookie. |
 ## What can it do?
 It can't do much at the moment, just printing out AJAX in specific div's. More functions will be added!
 
