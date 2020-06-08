@@ -7,9 +7,9 @@ Tool for my own use to speed up the process of making websites.
 |--|--|
 | $pin(selector).attr(name, value); | Hides selected object |
 | $pin(selector).hide(); | Hides selected object |
-| $pin(selector).getText(url, attribute); | Grabs the text from url, super basic ajax |
-| $pin(selector).getAjax(url, attribute, search); | Ajax call that can search through JSON for the right values |
-| $pin(selector).phoneMenu(float, target); | Handles the positioning of hamburger menu's |
+| $pin(selector).getText(url, attribute); | Grabs the content from url, super basic ajax |
+| $pin(selector).getAjax(url, attribute, search); | AJAX call that can search through JSON for the right values |
+| $pin(selector).phoneMenu(float, target); | Handles menu's on mobile devices. Mostly position. |
 | $pin(selector).random(value / empty); | Gives you a random number, default is 10. |
 
 ##Spincore CommandList
