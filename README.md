@@ -38,6 +38,6 @@ Yes of course you can do. But make sure you let people know that I'm the author 
 | getAjax() | Used to make a AJAX call to specified document. Attribute can be ignored. Specify `search` to find a object by name. `$pin(selector).getAjax(url, attribute | null, search)` |
 | getText() | Used to make a AJAX call to specified document. This function returns the entire requested document. `$pin(selector).getText(url, attribute / null)`|
 | random() | Outputs a random generated number. Default value is 10. `$pin(selector).random(int / null)`|
-| divInfo() | Works like a variable, select the object with the selector and set the value to ` left | right | top | bottom | width | height` as a string. `$pin(selector).divInfo(value)` | 
+| divInfo() | Works like a variable, select the object with the selector and set the value to ` left / right / top / bottom / width / height` as a string. `$pin(selector).divInfo(value)` | 
 
 *Made by Ludvig Olausson*
