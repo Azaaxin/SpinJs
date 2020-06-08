@@ -18,7 +18,7 @@ Tool for my own use to speed up the process of making websites.
 ##Spincore CommandList
 | Syntax | Description |
 |--|--|
-| `$pincore().random(value | empty)` | Gives you a random number, default is 10. |
+| `$pincore().random(value / empty)` | Gives you a random number, default is 10. |
 | `$pincore().setCookie(cookieName, cookieValue, expires)` | Creates a cookie from specified input. `expires` only count in days.|
 | `$pincore().getCookie(cookieName)` | Gets the cookie value. Has to be selected by it's name. |
 | `$pincore().delCookie(cookieName)` | Removes selected cookie. |
