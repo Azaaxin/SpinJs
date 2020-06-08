@@ -10,12 +10,12 @@ Tool for my own use to speed up the process of making websites.
 | $pin(selector).getText(url, attribute); | Grabs the text from url, super basic ajax |
 | $pin(selector).getAjax(url, attribute, search); | Ajax call that can search through JSON for the right values |
 | $pin(selector).phoneMenu(float, target); | Handles the positioning of hamburger menu's |
-| $pin(selector).random(value | empty); | Gives you a random number, default is 10. |
+| $pin(selector).random(value / empty); | Gives you a random number, default is 10. |
 
 ##Spincore CommandList
 | Syntax | Description |
 |--|--|
-| $pincore().random(value | empty) | Gives you a random number, default is 10. |
+| $pincore().random(value / empty) | Gives you a random number, default is 10. |
 
 ## What can it do?
 It can't do much at the moment, just printing out AJAX in specific div's. More functions will be added!
