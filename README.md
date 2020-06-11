@@ -40,4 +40,17 @@ Yes of course you can. But make sure you let people know that I'm the author by 
 | random() | Outputs a random generated number. Default value is 10. `$pin(selector).random(int / null)`|
 | divInfo() | Works like a variable, select the object with the selector and set the value to ` left / right / top / bottom / width / height` as a string. `$pin(selector).divInfo(value)` | 
 
+
+## Cobweb
+What does spiders have to do with this?
+`cobweb` is the "main" function, it has the tools for structuring objects and handling them. It can also handle animations such as zooming on hover. 
+Let's start to spin some silk so we get a cobweb! 
+<br/>
+
+|Name|Syntax| Description |
+|--|--|--|
+| PlaceMeAt | `$pin(selector).cobweb("PlaceMeAt", "selector2", "center/null")` | Moves `selector` to specified `selector2`. `center` positions `selector` in center of `selector2` both horizontally and vertically. Using `center` is optional.|
+More is coming!
+
+
 *Made by Ludvig Olausson*
