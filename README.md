@@ -14,6 +14,7 @@ Tool for my own use to speed up the process of making websites.
 | `$pin(selector).getAjax(url, attribute, search);` | AJAX call that can search through JSON for the right values |
 | `$pin(selector).phoneMenu(float, target);` | Handles menu's on mobile devices. Mostly position. |
 | `$pin(selector).random(value / empty);` | Gives you a random number, default is 10. |
+| `$pin(selector).cobweb(value, value, value);` | Multi-functional tool focused on events and positions, read more about it below. |
 
 ##Spincore CommandList
 | Syntax | Description |
