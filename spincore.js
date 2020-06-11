@@ -198,7 +198,39 @@ function $pin(selector)
             if(type == "height"){
                 return height;
             }
-        }
+        },
+        cobweb:(input, input2, input3)=>{ 
+            if(input == "PlaceMeAt" || input == "PLACEMEAT" || input == "placemeat"){ // --------------------------------------------------------------------------------------  PlaceMeAt
+                const input2Object = document.querySelector(input2);
+                const myObserver = new ResizeObserver(entries => {
+                    entries.forEach(entry => {
+                        cobweb_placeatme();
+                    });
+                });
+                myObserver.observe(input2Object);
+                window.addEventListener('resize', cobweb_placeatme());
+                input2Object.addEventListener('resize', cobweb_placeatme());
+                function cobweb_placeatme(){
+                    self.Element.style.position = ("absolute");
+                    self.Element.style.top = ("0px");
+                    self.Element.style.left = ("0px");
+                    let left = $pin(input2).divInfo("left");
+                    let top = $pin(input2).divInfo("top");
+                    if(input3 == "center"){
+                        let width = $pin(input2).divInfo("width") / 2;
+                        let height = $pin(input2).divInfo("height") / 2;
+                        let widthSelecor = $pin(selector).divInfo("width") / 2;
+                        let heightSelecor = $pin(selector).divInfo("height") / 2;
+                        let LeftCalc = (left + width) - widthSelecor;
+                        let topCalc = (top + height) - heightSelecor;
+                        self.Element.style.transform = ("translate(" + LeftCalc + "px, " + topCalc + "px)");
+                    } else {
+                        self.Element.style.transform = ("translate(" + left + "px, " + top + "px)");
+                    }
+                }
+            }
+            if(input == ""){} // --------------------------------------------------------------------------------------  Next Function
+        },
         
     }
     return self;
