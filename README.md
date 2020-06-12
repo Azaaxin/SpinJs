@@ -1,4 +1,4 @@
-# SpincoreJs
+# SpinJs
 ![Spincore icon](https://i.ibb.co/nPhJBsG/spincore.png)
 
 Tool for my own use to speed up the process of making websites.
