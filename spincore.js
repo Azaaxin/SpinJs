@@ -208,25 +208,30 @@ function $pin(selector)
                     });
                 });
                 myObserver.observe(input2Object);
+				// self.Element.addEventListener("click", cobweb_placeatme);
+				// input2Object.addEventListener("click", cobweb_placeatme);
+				// self.Element.addEventListener("mouseover", cobweb_placeatme);
+                // input2Object.addEventListener("mouseover", cobweb_placeatme);
+                var y = window.scrollY;
+                window.addEventListener('load', cobweb_placeatme);
                 window.addEventListener('resize', cobweb_placeatme);
-                input2Object.addEventListener('resize', cobweb_placeatme());
+                input2Object.addEventListener('resize', cobweb_placeatme);
                 function cobweb_placeatme(){
-                    alert("hello");
                     self.Element.style.position = ("absolute");
                     self.Element.style.top = ("0px");
                     self.Element.style.left = ("0px");
                     let left = $pin(input2).divInfo("left");
-                    let top = $pin(input2).divInfo("top");
-                    if(input3 == "center"){
-                        let width = $pin(input2).divInfo("width") / 2;
-                        let height = $pin(input2).divInfo("height") / 2;
-                        let widthSelecor = $pin(selector).divInfo("width") / 2;
-                        let heightSelecor = $pin(selector).divInfo("height") / 2;
-                        let LeftCalc = (left + width) - widthSelecor;
-                        let topCalc = (top + height) - heightSelecor;
-                        self.Element.style.transform = ("translate(" + LeftCalc + "px, " + topCalc + "px)");
+                    let top = $pin(input2).divInfo("top") + y;
+                    if(input3 != null && input3 == "center"){
+                            let width = $pin(input2).divInfo("width") / 2;
+                            let height = $pin(input2).divInfo("height") / 2;
+                            let widthSelecor = $pin(selector).divInfo("width") / 2;
+                            let heightSelecor = $pin(selector).divInfo("height") / 2;
+                            let LeftCalc = (left + width) - widthSelecor;
+                            let topCalc = (top + height) - heightSelecor;
+                            self.Element.style.transform = ("translate(" + LeftCalc + "px, " + topCalc + "px)");
                     } else {
-                        self.Element.style.transform = ("translate(" + left + "px, " + top + "px)");
+                            self.Element.style.transform = ("translate(" + left + "px, " + top + "px)");
                     }
                 }
             }
