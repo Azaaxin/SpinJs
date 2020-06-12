@@ -208,9 +208,10 @@ function $pin(selector)
                     });
                 });
                 myObserver.observe(input2Object);
-                window.addEventListener('resize', cobweb_placeatme());
+                window.addEventListener('resize', cobweb_placeatme);
                 input2Object.addEventListener('resize', cobweb_placeatme());
                 function cobweb_placeatme(){
+                    alert("hello");
                     self.Element.style.position = ("absolute");
                     self.Element.style.top = ("0px");
                     self.Element.style.left = ("0px");
