@@ -7,7 +7,7 @@ Tool for my own use to speed up the process of making websites.
 This is a JavaScript library that simplifies few parts of developing and designing web apps.
 
 ## How do I use it?
-You start with the main function, `$pin`. Then tell the function what object to look for by adding parentheses after `$pin` with object id for example.
+You start with the main function, `$pin`. Then tell the function what object to look for by adding parentheses after `$pin` with object id.
 When you have done that, you can start to tell it what to do by adding `.nameOfAction()` so for example if you use `.divInfo(value)`
 you can replace value with `"width"` to return the width of the object as a number.<br/><br/>
 The final code for this example can look like this: `$pin("#wrapper").divInfo("width");`
